@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>G-导航</title>
+	<link rel="stylesheet" type="text/css" href="gang.css">
+	<link rel="shortcut icon" href="img\导航.ico"/>
+	<meat charset="utf-8"/>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div class="sidenav">
+		<div class=sidenav-desc>
+			<div class="sidenav-content">
+				&nbsp;&nbsp;G航 www.gang.com
+			</div>
+		</div>
+		<hr noshade="#6b738" width="90%" >
+		<div class="nav-name">
+			<div class="nav-desc" >
+				&nbsp;&nbsp;&nbsp;<img src="img\nav.png"/>G-导航
+			</div>
+		</div>
+		<hr noshade="#6b738" width="90%">
+		<div class="nav" id="nav">
+			<ul>
+				<li><img src="img\news.png"><a href="#" v-on:click="show=!show">新闻头条</a>
+					<ul class="nav-items" v-show="show">
+						<li><a href="#">&bull;今日头条<a href="#"></li>
+						<li><a href="#">&bull;腾讯新闻<a href="#"></li>
+						<li><a href="#">&bull;新华网<a href="#"></li>
+						<li><a href="#">&bull;凤凰咨询<a href="#"></li>
+						<li><a href="#">&bull;新浪新闻<a href="#"></li>
+						<li><a href="#">&bull;网易新闻<a href="#"></li>
+						<li><a href="#">&bull;澎湃新闻<a href="#"></li>
+						<li><a href="#">&bull;hao123<a href="#"></li>
+						<li><a href="#">&bull;百度新闻<a href="#"></li>
+					</ul>
+				</li>
+				<li><img src="img\shipin.png"><a href="#视频网站" v-on:click="show1=!show1">视频网站</a>
+					<ul class="nav-items" v-show="show1">
+						<li><a href="#">&bull;爱奇艺<a href="#"></li>
+						<li><a href="#">&bull;哔哩哔哩<a href="#"></li>
+						<li><a href="#">&bull;优酷视频<a href="#"></li>
+						<li><a href="#">&bull;土豆视频<a href="#"></li>
+						<li><a href="#">&bull;搜狐视频<a href="#"></li>
+						<li><a href="#">&bull;暴风影音<a href="#"></li>
+						<li><a href="#">&bull;芒果TV<a href="#"></li>
+						<li><a href="#">&bull;乐视TV<a href="#"></li>
+						<li><a href="#">&bull;百度视频<a href="#"></li>
+					</ul>
+				</li>
+				<li><img src="img\zhibo.png"><a href="#直播平台" v-on:click="show2=!show2">直播平台</a>
+					<ul class="nav-items" v-show="show2">
+						<li><a href="#">&bull;虎牙直播<a href="#"></li>
+						<li><a href="#">&bull;斗鱼TV<a href="#"></li>
+						<li><a href="#">&bull;战旗TV<a href="#"></li>
+						<li><a href="#">&bull;龙珠直播<a href="#"></li>
+						<li><a href="#">&bull;花椒直播<a href="#"></li>
+						<li><a href="#">&bull;企鹅电竞<a href="#"></li>
+						<li><a href="#">&bull;风云直播<a href="#"></li>
+						<li><a href="#">&bull;YY直播<a href="#"></li>
+						<li><a href="#">&bull;全民TV<a href="#"></li>
+					</ul>
+				</li>
+				<li><img src="img\game.png"><a href="#网络游戏" v-on:click="show3=!show3">网络游戏</a>
+					<ul class="nav-items" v-show="show3">
+						<li><a href="#">&bull;英雄联盟<a href="#"></li>
+						<li><a href="#">&bull;DOTA2<a href="#"></li>
+						<li><a href="#">&bull;地下城与勇士<a href="#"></li>
+						<li><a href="#">&bull;穿越火线<a href="#"></li>
+						<li><a href="#">&bull;QQ飞车<a href="#"></li>
+						<li><a href="#">&bull;我的世界<a href="#"></li>
+						<li><a href="#">&bull;欢乐斗地主<a href="#"></li>
+						<li><a href="#">&bull;绝地求生<a href="#"></li>
+						<li><a href="#">&bull;魔兽世界<a href="#"></li>
+					</ul>
+				</li>
+				<li><img src="img\tools.png"><a href="# 实用工具" v-on:click="show4=!show4">实用工具</a>
+					<ul class="nav-items" v-show="show4">
+						<li><a href="#">&bull;敬请期待<a href="#"></li>
+					</ul>
+				</li>
+				<li><img src="img\shequ.png"><a href="#开发社区" v-on:click="show5=!show5">开发社区</a>
+					<ul class="nav-items" v-show="show5">
+						<li><a href="#">&bull;敬请期待<a href="#"></li>
+					</ul>
+				</li>
+				<li><img src="img\learn.png"><a href="#学无止境" v-on:click="show6=!show6">学无止境</a>
+					<ul class="nav-items" v-show="show6">
+						<li><a href="#">&bull;敬请期待<a href="#"></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="box">
+		<div class="box-del">
+			<a href="#">
+				<img src="img\fengche.png"><span>新闻头条</span>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\toutiao.jpg"><span>今日头条</span>
+				</div>
+				<div class="desc">
+					<span>实时发布最新新闻头条,新闻资讯,今日新闻资讯,最新新闻,热点新闻资讯。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\tx.jpg"><span>腾讯新闻</span>
+				</div>
+				<div class="desc">
+					<span>今日话题独家精选，剖析深刻，点评犀利，用常识解读新闻。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\xinhua.jpg"><span>新华网</span>
+				</div>
+				<div class="desc">
+					<span>国家通讯社新华社主办的综合新闻信息服务门户网站。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\fenghuang.jpg"><span>凤凰资讯</span>
+				</div>
+				<div class="desc">
+					<span>24小时提供大陆、台湾、香港、国际重大</br>新闻资讯。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\xinlang.png"><span>新浪新闻</span>
+				</div>
+				<div class="desc">
+					<span>24小时滚动报道国内、国际及社会新闻。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\163.jpg"><span>网易新闻</span>
+				</div>
+				<div class="desc">
+					<span>时政、国内、国际、社会、时事评论、专<br>业时事报道门户网站。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\pengpai.jpg"><span>澎湃新闻</span>
+				</div>
+				<div class="desc">
+					<span>专注时政与思想的媒体开放平台。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\hao123.jpg"><span>hao123</span>
+				</div>
+				<div class="desc">
+					<span>聚合全网最新的新闻,最热点的新闻。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\baidunews.jpg"><span>百度新闻</span>
+				</div>
+				<div class="desc">
+					<span>海量资讯的新闻服务平台,真实反映每时每刻的新闻热点。</span>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="box">
+		<div class="box-del">
+			<a href="#" name="视频网站">
+				<img src="img\fengche.png"><span>视频网站</span>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\aiqiyi.jpg"><span>爱奇艺</span>
+				</div>
+				<div class="desc">
+					<span>拥有海量、优质、高清的网络视频的大型视频网站,专业的网络视频播放平台。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\b.jpg"><span>哔哩哔哩</span>
+				</div>
+				<div class="desc">
+					<span>国内知名的视频弹幕网站。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\youku.jpg"><span>优酷视频</span>
+				</div>
+				<div class="desc">
+					<span>中国第一视频网站。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\tudou.jpg"><span>土豆视频</span>
+				</div>
+				<div class="desc">
+					<span>阿里巴巴文化娱乐集团旗下短视频平台。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\souhushipin.png"><span>搜狐视频</span>
+				</div>
+				<div class="desc">
+					<span>搜狐旗下专业的综合视频网站。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\baofeng.jpg"><span>暴风影音</span>
+				</div>
+				<div class="desc">
+					<span>提供免费、高清网络视频服务的大型视频<br>网站。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\mangguo.jpg"><span>芒果TV</span>
+				</div>
+				<div class="desc">
+					<span>湖南卫视在线视频媒体平台。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\leshi.jpg"><span>乐视视频</span>
+				</div>
+				<div class="desc">
+					<span>汇集海量电影、电视、动漫、综艺正版视频。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\baidushipin.jpg"><span>百度视频</span>
+				</div>
+				<div class="desc">
+					<span>拥有海量的中文视频资源,提供用户满意的观看体验。</span>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="box">
+		<div class="box-del">
+			<a href="#" name="直播平台">
+				<img src="img\fengche.png"><span>直播平台</span>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\huya.jpg"><span>虎牙直播</span>
+				</div>
+				<div class="desc">
+					<span>以游戏直播为主的弹幕式互动直播平台。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\douyu.jpg"><span>斗鱼TV</span>
+				</div>
+				<div class="desc">
+					<span>提供高清、快捷、流畅的视频直播和游戏<br>赛事直播服务。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\zhanqi.jpg"><span>战旗TV</span>
+				</div>
+				<div class="desc">
+					<span>提供高清、流畅的视频直播和电子竞技游戏直播。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\longzhu.jpg"><span>龙珠直播</span>
+				</div>
+				<div class="desc">
+					<span>超全的赛事直播,丰富的游戏视频互动平台。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\huajiao.jpg"><span>花椒直播</span>
+				</div>
+				<div class="desc">
+					<span>国内具有强属性的移动社交直播平台。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\qie.jpg"><span>企鹅电竞</span>
+				</div>
+				<div class="desc">
+					<span>腾讯游戏官方直播平台。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\fengyun.jpg"><span>风云直播</span>
+				</div>
+				<div class="desc">
+					<span>网络电视直播,在线观看电视直播。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\yy.jpg"><span>YY直播</span>
+				</div>
+				<div class="desc">
+					<span>全民娱乐的互动直播平台。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\quanmin.jpg"><span>全民TV</span>
+				</div>
+				<div class="desc">
+					<span>一个尊重观众、尊重主播的全民直播网站<br>平台。</span>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="box">
+		<div class="box-del">
+			<a href="#" name="网络游戏">
+				<img src="img\fengche.png"><span>网络游戏</span>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\lol.jpg"><span>英雄联盟</span>
+				</div>
+				<div class="desc">
+					<span>由Riot Games开发、中国大陆地区腾讯游戏代理运营的英雄对战MOBA竞技网游。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\dota2.jpg"><span>DOTA2</span>
+				</div>
+				<div class="desc">
+					<span>由《DOTA》的地图核心制作者IceFrog联手美国Valve公司研发的一款游戏。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\dnf.jpg"><span>地下城与勇士</span>
+				</div>
+				<div class="desc">
+					<span>全球2D横版格斗网络游戏(MMOACT)的先行者。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\cf.jpg"><span>穿越火线</span>
+				</div>
+				<div class="desc">
+					<span>300万人同时在线,三亿鼠标的枪战梦想。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\feiche.jpg"><span>QQ飞车</span>
+				</div>
+				<div class="desc">
+					<span>腾讯自主研发的竞速类休闲网络游戏。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\world.jpg"><span>我的世界</span>
+				</div>
+				<div class="desc">
+					<span>一款沙盒游戏，所呈现的世界并不是华丽<br>的画面与特效，而是注重在游戏性上面。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\doudizhu.jpg"><span>欢乐斗地主</span>
+				</div>
+				<div class="desc">
+					<span>腾讯移动游戏平台的首款实时对战棋牌手游。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\chiji.jpg"><span>绝地求生</span>
+				</div>
+				<div class="desc">
+					<span>一款战术竞技游戏。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\moshou.jpg"><span>魔兽世界</span>
+				</div>
+				<div class="desc">
+					<span>由著名游戏公司暴雪娱乐所制作的第一款<br>网络游戏。</span>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="box">
+		<div class="box-del">
+			<a href="#" name="实用工具">
+				<img src="img\fengche.png"><span>实用工具</span>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="box">
+		<div class="box-del">
+			<a href="#" name="开发社区">
+				<img src="img\fengche.png"><span>开发社区</span>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="box">
+		<div class="box-del">
+			<a href="#" name="学无止境">
+				<img src="img\fengche.png"><span>学无止境</span>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+		<div class="box-content">
+			<a href="#">
+				<div class="logo">
+					<img src="img\wait.jpg"><span>敬请期待</span>
+				</div>
+				<div class="desc">
+					<span>敬请期待。。。。</span>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="touch" >
+		<a href="#" >
+			<img src="img\wx.png">
+			联系我
+		</a>
+		<div class="erweima">
+			<img src="img\erweima.jpg">
+		</div>
+	</div>
+	<script type="text/javascript" src="gang.js"></script>
+</body>
+</html>
